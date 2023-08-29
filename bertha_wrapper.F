@@ -1,6 +1,7 @@
       module bertha_wrapper
 
       use, intrinsic :: iso_c_binding
+
       use cublas
       use cusolverDn
       use cudafor
@@ -8,7 +9,7 @@
       implicit none
 
       real :: thresh
-      public :: get_thresh
+      public :: get_thresh, bertha_main
 
       contains
 

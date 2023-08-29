@@ -1,6 +1,6 @@
       program bertha
 
-      use bertha_wrapper
+      use bertha_wrapper, only : bertha_main
 
       use cublas
       use cusolverDn

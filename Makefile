@@ -8,11 +8,13 @@ OBJ = \
       c_wrapper.o \
       bertha_wrapper.o
 
-all : $(BERTHAWLIB)
+all : $(BERTHAWLIB) testb
 
 $(BERTHAWLIB): $(OBJ)
 	$(FC) -shared $(LINKFLAGS) $(OBJ) -o $(BERTHAWLIB) $(LIBS)
-	cp $(BERTHAWLIB) ../lib
+
+testb: $(BERTHAWLIB) main.o
+	$(FC) -shared $(LINKFLAGS) main.o -o $@ $(BERTHAWLIB)
 
 clean:
-	rm -f *.o *.mod *__genmod.f90 $(BERTHAWLIB) 
+	rm -f *.o *.mod *__genmod.f90 $(BERTHAWLIB) testb
