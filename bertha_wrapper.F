@@ -26,6 +26,8 @@ ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
       implicit none
 
+      call gfinit()
+
       thresh = 1.0e-5
 
       end subroutine 

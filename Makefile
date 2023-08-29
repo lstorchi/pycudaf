@@ -3,6 +3,8 @@ include ./config.mk
 BERTHAWLIB = bertha_wrapper.so
 
 OBJ = \
+      funfm.o \
+      gfinit.o \
       c_wrapper.o \
       bertha_wrapper.o
 
