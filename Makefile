@@ -14,7 +14,7 @@ $(BERTHAWLIB): $(OBJ)
 	$(FC) -shared $(LINKFLAGS) $(OBJ) -o $(BERTHAWLIB) $(LIBS)
 
 testb: $(BERTHAWLIB) main.o
-	$(FC) -shared $(LINKFLAGS) main.o -o $@ $(BERTHAWLIB)
+	$(FC) $(LINKFLAGS) main.o -o $@ $(BERTHAWLIB)
 
 clean:
 	rm -f *.o *.mod *__genmod.f90 $(BERTHAWLIB) testb
