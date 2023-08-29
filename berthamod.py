@@ -10,6 +10,13 @@ class pybertha:
             raise Error("SO %s  does not exist" % soname)
 
         self.__bertha = ctypes.cdll.LoadLibrary(soname)
+
+    def get_thresh (self):
+
+        self.__bertha.get_thresh.restype = ctypes.c_double
+ 
+        return self.__bertha.get_thresh()
+
         
     def run(self):
 

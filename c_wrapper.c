@@ -1,10 +1,11 @@
 #include <string.h>
 #include <stdio.h>
 
-
 #define f_thresh bertha_wrapper_get_thresh_
+#define f_bertha_main bertha_wrapper_bertha_main_
 
-void bertha_wrapper_set_thresh_ (double *);
+void f_thresh (double *);
+void f_bertha_main ();
 
 double get_thresh ()
 {
@@ -13,3 +14,11 @@ double get_thresh ()
 
   return val;
 }
+
+int mainrun()
+{
+  f_bertha_main();
+
+  return 0;
+}
+
